@@ -96,7 +96,7 @@ export default function BookingPage() {
     await createBooking({
       guestName: manualForm.guestName,
       phone: manualForm.phone,
-      email: manualForm.email || undefined,
+      email: manualForm.email || "",
       roomType: manualForm.roomType,
       preferredRoom: manualForm.preferredRoom || undefined,
       checkIn: manualForm.checkIn,

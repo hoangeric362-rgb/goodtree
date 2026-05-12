@@ -34,7 +34,7 @@ export default defineSchema({
   guests: defineTable({
     name: v.string(),
     phone: v.string(),
-    email: v.string(),
+    email: v.optional(v.string()),
     roomId: v.id("rooms"),
     roomNumber: v.string(),
     roomType: v.string(),
@@ -53,7 +53,7 @@ export default defineSchema({
     bookingCode: v.string(),
     guestName: v.string(),
     phone: v.string(),
-    email: v.string(),
+    email: v.optional(v.string()),
     roomType: v.string(),
     preferredRoom: v.optional(v.string()),
     checkIn: v.string(),

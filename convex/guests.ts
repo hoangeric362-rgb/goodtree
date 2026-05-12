@@ -22,7 +22,7 @@ export const create = mutation({
   args: {
     name: v.string(),
     phone: v.string(),
-    email: v.string(),
+    email: v.optional(v.string()),
     roomId: v.id("rooms"),
     roomNumber: v.string(),
     roomType: v.string(),
