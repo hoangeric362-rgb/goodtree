@@ -31,10 +31,11 @@ export function StatCard({
 }
 
 export function Badge({
-  children, variant = "green",
+  children, variant = "green", className,
 }: {
   children: ReactNode;
   variant?: "green" | "yellow" | "blue" | "red" | "purple" | "gold";
+  className?: string;
 }) {
   const styles: Record<string, React.CSSProperties> = {
     green: { background: "rgba(74,222,128,0.1)", color: "var(--gt-green)" },
@@ -45,7 +46,7 @@ export function Badge({
     gold: { background: "rgba(212,168,83,0.1)", color: "var(--gt-gold)" },
   };
   return (
-    <span className="inline-block px-2 py-0.5 rounded-full text-xs font-medium"
+    <span className={cn("inline-block px-2 py-0.5 rounded-full text-xs font-medium", className)}
       style={styles[variant]}>
       {children}
     </span>
